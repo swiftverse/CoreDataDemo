@@ -13,6 +13,7 @@
 		7343AF2425F4E0B3006C3436 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7343AF2225F4E0B3006C3436 /* Main.storyboard */; };
 		7343AF2625F4E0B5006C3436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7343AF2525F4E0B5006C3436 /* Assets.xcassets */; };
 		7343AF2925F4E0B5006C3436 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7343AF2725F4E0B5006C3436 /* LaunchScreen.storyboard */; };
+		7343AF3C25F4E3FF006C3436 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7343AF3B25F4E3FF006C3436 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7343AF2525F4E0B5006C3436 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7343AF2825F4E0B5006C3436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7343AF2A25F4E0B5006C3436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7343AF3B25F4E3FF006C3436 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,72 @@
 		7343AF1B25F4E0B3006C3436 /* CoreDataDemo */ = {
 			isa = PBXGroup;
 			children = (
-				7343AF1C25F4E0B3006C3436 /* AppDelegate.swift */,
-				7343AF1E25F4E0B3006C3436 /* SceneDelegate.swift */,
-				7343AF2025F4E0B3006C3436 /* ViewController.swift */,
-				7343AF2225F4E0B3006C3436 /* Main.storyboard */,
-				7343AF2525F4E0B5006C3436 /* Assets.xcassets */,
-				7343AF2725F4E0B5006C3436 /* LaunchScreen.storyboard */,
-				7343AF2A25F4E0B5006C3436 /* Info.plist */,
+				7343AF3A25F4E3C4006C3436 /* Managers */,
+				7343AF3625F4E12F006C3436 /* Supporting Files */,
+				7343AF3525F4E125006C3436 /* Resources */,
+				7343AF3425F4E11C006C3436 /* Storyboards */,
+				7343AF3225F4E0F3006C3436 /* View Controllers */,
+				7343AF3125F4E0E4006C3436 /* Application Delegate */,
 			);
 			path = CoreDataDemo;
+			sourceTree = "<group>";
+		};
+		7343AF3125F4E0E4006C3436 /* Application Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				7343AF1E25F4E0B3006C3436 /* SceneDelegate.swift */,
+				7343AF1C25F4E0B3006C3436 /* AppDelegate.swift */,
+			);
+			path = "Application Delegate";
+			sourceTree = "<group>";
+		};
+		7343AF3225F4E0F3006C3436 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7343AF3325F4E10A006C3436 /* Root View Controllers */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		7343AF3325F4E10A006C3436 /* Root View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7343AF2025F4E0B3006C3436 /* ViewController.swift */,
+			);
+			path = "Root View Controllers";
+			sourceTree = "<group>";
+		};
+		7343AF3425F4E11C006C3436 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7343AF2225F4E0B3006C3436 /* Main.storyboard */,
+				7343AF2725F4E0B5006C3436 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		7343AF3525F4E125006C3436 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7343AF2525F4E0B5006C3436 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7343AF3625F4E12F006C3436 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7343AF2A25F4E0B5006C3436 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7343AF3A25F4E3C4006C3436 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				7343AF3B25F4E3FF006C3436 /* CoreDataManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +198,7 @@
 			files = (
 				7343AF2125F4E0B3006C3436 /* ViewController.swift in Sources */,
 				7343AF1D25F4E0B3006C3436 /* AppDelegate.swift in Sources */,
+				7343AF3C25F4E3FF006C3436 /* CoreDataManager.swift in Sources */,
 				7343AF1F25F4E0B3006C3436 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,7 +348,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SHSTR87TMU;
-				INFOPLIST_FILE = CoreDataDemo/Info.plist;
+				INFOPLIST_FILE = "CoreDataDemo/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +367,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SHSTR87TMU;
-				INFOPLIST_FILE = CoreDataDemo/Info.plist;
+				INFOPLIST_FILE = "CoreDataDemo/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
