@@ -58,6 +58,7 @@
 		7343AF1B25F4E0B3006C3436 /* CoreDataDemo */ = {
 			isa = PBXGroup;
 			children = (
+				73B1CB4225F5EB3400C5A338 /* Core Data */,
 				7343AF3A25F4E3C4006C3436 /* Managers */,
 				7343AF3625F4E12F006C3436 /* Supporting Files */,
 				7343AF3525F4E125006C3436 /* Resources */,
@@ -124,6 +125,13 @@
 				7343AF3B25F4E3FF006C3436 /* CoreDataManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		73B1CB4225F5EB3400C5A338 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
