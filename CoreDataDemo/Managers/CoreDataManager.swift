@@ -6,6 +6,7 @@
 //
 
 import CoreData
+import UIKit
 
 final class CoreDataManager {
     //MARK: - Properties
@@ -15,6 +16,7 @@ final class CoreDataManager {
     
     init(modelName: String) {
         self.modelName = modelName
+        setupNotoficationHandling()
     }
     
     //MARK:- managedobject context
@@ -66,5 +68,27 @@ final class CoreDataManager {
         return persistantStoreCoordinator
     }()
     
+    private func setupNotoficationHandling() {
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(saveChanges), name: UIApplication.didEnterBackgroundNotification, object: nil)
+        
+  //      notificationCenter.addObserver(self, selector: #selector(saveChanges(_:)), name: UIApplication.willTerminateNotification, object: nil)
+        
+
+        
+    }
     
+    @objc func saveChanges() {
+        saveChanges1()
+    }
+    
+    private func saveChanges1() {
+        guard managedObjectContext.hasChanges else { return }
+        do {
+            try managedObjectContext.save()
+        }
+        catch {
+            print("\(error), \(error.localizedDescription)")
+        }
+    }
 }
