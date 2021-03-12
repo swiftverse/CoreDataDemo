@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var backButtonImage = UIImage(systemName: "arrow.backward", withConfiguration: UIImage.SymbolConfiguration(pointSize: 20, weight: .bold))
         backButtonImage = backButtonImage?.withAlignmentRectInsets(UIEdgeInsets(top: 0, left: -20, bottom: 0, right: 0))
         navBarAppearance.setBackIndicatorImage(backButtonImage, transitionMaskImage: backButtonImage)
+        
       //  UINavigationBar.appearance().tintColor = .white
         UINavigationBar.appearance().standardAppearance = navBarAppearance
         UINavigationBar.appearance().compactAppearance = navBarAppearance

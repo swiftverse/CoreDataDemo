@@ -42,12 +42,14 @@ class AddNoteViewController: UIViewController {
             showAlert(with: "No title", for: "Enter data for note")
             return
         }
-        
+
         let note = Note(context: managedObjectContext)
         note.title = textData.text
         note.contents = textViewData.text
         note.createdAt = Date()
         note.updatedAt = Date()
+        
+      
         
         _ = navigationController?.popViewController(animated: true)
     }

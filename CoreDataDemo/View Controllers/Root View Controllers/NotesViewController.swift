@@ -49,7 +49,7 @@ class NotesViewController: UIViewController {
 //                }
 //
 //            catch {
-//                print("unable to sabe MOC")
+//                print("unable to save MOC")
 //                print("(\(error), \(error.localizedDescription)")
 //            }
         }

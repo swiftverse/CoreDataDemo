@@ -70,19 +70,19 @@ final class CoreDataManager {
     
     private func setupNotoficationHandling() {
         let notificationCenter = NotificationCenter.default
-        notificationCenter.addObserver(self, selector: #selector(saveChanges), name: UIApplication.didEnterBackgroundNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(saveChanges(_:)), name: UIApplication.didEnterBackgroundNotification, object: nil)
         
-  //      notificationCenter.addObserver(self, selector: #selector(saveChanges(_:)), name: UIApplication.willTerminateNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(saveChanges(_:)), name: UIApplication.willTerminateNotification, object: nil)
         
 
         
     }
     
-    @objc func saveChanges() {
-        saveChanges1()
+    @objc func saveChanges(_ notification: Notification) {
+        saveChanges()
     }
     
-    private func saveChanges1() {
+    private func saveChanges() {
         guard managedObjectContext.hasChanges else { return }
         do {
             try managedObjectContext.save()
